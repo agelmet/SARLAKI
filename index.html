@@ -4,20 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
-    <title>Μάιρα Σαρλάκη | Κλινική Ψυχολόγος Αγία Παρασκευή & Online</title>
+    <title>Μάιρα Σαρλάκη | Ψυχολόγος - ΜΑ Ψυχοθεραπεύτρια</title>
     <meta name="description" content="Εξειδικευμένη Ψυχοδυναμική Ψυχοθεραπεία στην Αγία Παρασκευή και Online. Αντιμετώπιση άγχους, φοβιών & συμβουλευτική γονέων. Κλείστε ραντεβού σήμερα.">
     <meta name="keywords" content="Ψυχολόγος, Αγία Παρασκευή, Ψυχοθεραπεία, Online Ψυχολόγος, Αγχος, Κρίσεις Πανικού, Συμβουλευτική Γονέων, Μάιρα Σαρλάκη">
     <meta name="author" content="Advon Media">
-    <meta property="og:title" content="Μάιρα Σαρλάκη | Κλινική Ψυχολόγος">
+    <meta property="og:title" content="Μάιρα Σαρλάκη | Ψυχολόγος - ΜΑ Ψυχοθεραπεύτρια">
     <meta property="og:description" content="Ψυχοδυναμική Προσέγγιση με Επίκεντρο τον Ανθρωπο.">
     <meta property="og:image" content="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699551c5bf62aa267f7390d1.png">
     <meta property="og:type" content="website">
 
     <link rel="icon" href="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699551c5bf62aa267f7390d1.png" type="image/png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -35,7 +31,7 @@
                     },
                     fontFamily: {
                         serif: ['"Times New Roman"', 'Times', 'serif'],
-                        sans: ['Montserrat', 'sans-serif'],
+                        sans: ['"Times New Roman"', 'Times', 'serif'],
                     },
                     animation: {
                         'marquee': 'marquee 40s linear infinite',
@@ -65,7 +61,7 @@
         /* Base & Custom Cursor */
         @media (pointer: fine) {
             body { cursor: none; }
-            a, button, [onclick] { cursor: none; }
+            a, button, [onclick], input, textarea { cursor: none; }
         }
         
         ::-webkit-scrollbar { width: 6px; }
@@ -142,12 +138,12 @@
                 <span class="font-serif text-2xl md:text-3xl whitespace-nowrap"><span class="text-black">Μάιρα</span> <span class="text-cypress">Σαρλάκη</span></span>
             </a>
 
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+            <div class="hidden md:flex items-center space-x-8 text-[16px] font-medium">
                 <a href="#profile" class="hover-trigger relative text-black after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-cypress after:transition-all hover:after:w-full">Βιογραφικό</a>
                 <a href="#services" class="hover-trigger relative text-black after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-cypress after:transition-all hover:after:w-full">Υπηρεσίες</a>
                 <a href="#blog" class="hover-trigger relative text-black after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-cypress after:transition-all hover:after:w-full">Blog</a>
                 <a href="#reviews" class="hover-trigger relative text-black after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-cypress after:transition-all hover:after:w-full">Αξιολογήσεις</a>
-                <a href="#contact" class="hover-trigger bg-cypress text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-colors shadow-sm">Επικοινωνία</a>
+                <a href="#contact" class="hover-trigger bg-cypress text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-colors shadow-sm text-[16px]">Επικοινωνία</a>
             </div>
 
             <button id="mobile-menu-btn" class="hover-trigger md:hidden z-50 text-cypress w-10 h-10 flex flex-col justify-center items-center gap-1.5 rounded-full bg-cypress/5">
@@ -169,47 +165,48 @@
         <div class="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] bg-sand/40 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob pointer-events-none"></div>
         <div class="absolute bottom-1/4 right-1/4 w-[30vw] h-[30vw] bg-terra/40 rounded-full mix-blend-multiply filter blur-[60px] opacity-70 animate-blob pointer-events-none" style="animation-delay: 2s;"></div>
 
-        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 mt-20">
-            <div class="flex flex-col items-center md:items-start reveal">
-                
-                <h1 class="text-6xl md:text-8xl lg:text-[9vw] font-serif leading-[0.9] text-black flex flex-col mb-4">
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 mt-20 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
+            
+            <div class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 shrink-0 rounded-full overflow-hidden shadow-2xl border-4 border-cream reveal">
+                <img src="https://github.com/agelmet/SARLAKI/blob/main/1111.jpg?raw=true" referrerpolicy="no-referrer" alt="Μάιρα Σαρλάκη" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
+            </div>
+
+            <div class="flex flex-col items-center md:items-start text-center md:text-left reveal delay-200">
+                <h1 class="text-6xl md:text-8xl lg:text-[7vw] font-serif leading-[0.9] text-black flex flex-col mb-4">
                     <span class="hover-trigger relative z-20">Μάιρα</span>
-                    <span class="hover-trigger text-stroke ml-0 md:ml-24 relative z-10">Σαρλάκη</span>
+                    <span class="hover-trigger text-stroke relative z-10">Σαρλάκη</span>
                 </h1>
                 
-                <h2 class="text-xl md:text-2xl font-sans text-black/70 mb-12 ml-0 md:ml-6 border-l-2 border-cypress pl-4">
+                <h2 class="text-xl md:text-2xl font-serif text-black/70 mb-10 border-l-2 border-cypress pl-4 ml-0 md:ml-2">
                     Ψυχολόγος- ΜΑ Ψυχοθεραπεύτρια
                 </h2>
                 
-                <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-24 w-full ml-0 md:ml-6">
-                    <a href="#profile" class="hover-trigger group relative overflow-hidden rounded-full px-10 py-4 flex items-center gap-3 bg-cypress shadow-md">
-                        <span class="relative z-10 text-sm text-cream font-medium">Βιογραφικό</span>
-                        <i data-lucide="arrow-down" class="relative z-10 w-4 h-4 text-cream group-hover:translate-y-1 transition-transform duration-300"></i>
-                    </a>
-                </div>
+                <a href="#profile" class="hover-trigger group relative overflow-hidden rounded-full px-10 py-4 flex items-center justify-center md:justify-start gap-3 bg-cypress shadow-md ml-0 md:ml-2 w-auto inline-flex">
+                    <span class="relative z-10 text-[16px] text-cream font-medium">Βιογραφικό</span>
+                    <i data-lucide="arrow-down" class="relative z-10 w-4 h-4 text-cream group-hover:translate-y-1 transition-transform duration-300"></i>
+                </a>
             </div>
+
         </div>
 
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 reveal delay-500">
             <span class="w-px h-16 bg-gradient-to-b from-cypress to-transparent"></span>
-            <span class="text-[10px] tracking-[0.2em] font-sans text-cypress/70">Περιήγηση</span>
+            <span class="text-[12px] tracking-[0.2em] font-serif text-cypress/70 uppercase">Περιηγηση</span>
         </div>
     </header>
 
     <div class="py-6 border-y border-espresso/10 bg-sand/20 overflow-hidden flex items-center z-20 relative">
         <div class="flex w-[200%] animate-marquee">
-            <div class="flex justify-around w-full gap-8 items-center text-sm font-sans tracking-wide text-black/70 whitespace-nowrap">
-                <span>Θεραπεία</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
-                <span>Συμβουλευτική</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
-                <span>Workshops</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
-                <span>Online συνεδρίες</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
-                <span>Αυτοβελτίωση</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
+            <div class="flex justify-around w-full gap-8 items-center text-[16px] font-serif tracking-wide text-black/80 whitespace-nowrap">
+                <span>Ατομική ψυχοθεραπεία ενηλίκων</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
+                <span>Ψυχοθεραπεία εφήβων</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
+                <span>Συμβουλευτική γονέων</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
+                <span>Online διαδικτυακές συνεδρίες</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
                 
-                <span>Θεραπεία</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
-                <span>Συμβουλευτική</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
-                <span>Workshops</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
-                <span>Online συνεδρίες</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
-                <span>Αυτοβελτίωση</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
+                <span>Ατομική ψυχοθεραπεία ενηλίκων</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
+                <span>Ψυχοθεραπεία εφήβων</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
+                <span>Συμβουλευτική γονέων</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
+                <span>Online διαδικτυακές συνεδρίες</span> <span class="w-1.5 h-1.5 rounded-full bg-cypress/50"></span>
             </div>
         </div>
     </div>
@@ -223,14 +220,14 @@
                     
                     <div class="relative hover-trigger group overflow-hidden rounded-lg shadow-lg" onclick="openModal('https://github.com/agelmet/SARLAKI/blob/main/1111.jpg?raw=true')">
                         <div class="absolute inset-0 bg-cypress/10 group-hover:bg-transparent transition-colors duration-700 z-10 pointer-events-none"></div>
-                        <img src="https://github.com/agelmet/SARLAKI/blob/main/1111.jpg?raw=true" referrerpolicy="no-referrer" alt="Μάιρα Σαρλάκη Ψυχολόγος" class="w-full h-[60vh] object-cover scale-105 group-hover:scale-100 transition-transform duration-1000 origin-center grayscale-[10%]">
+                        <img src="https://github.com/agelmet/SARLAKI/blob/main/1111.jpg?raw=true" referrerpolicy="no-referrer" alt="Μάιρα Σαρλάκη Ψυχολόγος" class="w-full h-[60vh] object-cover object-top scale-105 group-hover:scale-100 transition-transform duration-1000 origin-center grayscale-[10%]">
                         <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent z-20">
-                            <p class="text-sm font-serif tracking-wide text-cream">Μάιρα Σαρλάκη</p>
+                            <p class="text-[16px] font-serif tracking-wide text-cream">Μάιρα Σαρλάκη</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="w-full lg:w-7/12 pt-10 lg:pt-0 space-y-6 text-black/80 font-light text-lg leading-relaxed text-justify">
+                <div class="w-full lg:w-7/12 pt-10 lg:pt-0 space-y-6 text-black/80 font-light text-[16px] leading-relaxed text-justify">
                     <p class="reveal">
                         <span class="float-left text-6xl font-serif text-cypress leading-none pr-3 pt-1">Ε</span>
                         ίμαι πτυχιούχος Ψυχολογίας του University of Central Lancashire και κάτοχος άδειας ασκήσεως επαγγέλματος ψυχολόγου (αρ. 778902).
@@ -253,7 +250,7 @@
                     <p class="reveal delay-600">
                         Θεωρώ τη συνεχιζόμενη εκπαίδευση βασικό κομμάτι της επαγγελματικής μου εξέλιξης. Φροντίζω να ενημερώνομαι συστηματικά για τις σύγχρονες εξελίξεις στον χώρο της ψυχολογίας μέσα από τη συμμετοχή μου σε ημερίδες, συνέδρια και εξειδικευμένα σεμινάρια, με στόχο τη διαρκή ενίσχυση της γνώσης και της κλινικής μου κατάρτισης.
                     </p>
-                    <p class="reveal delay-700 font-medium text-black">
+                    <p class="reveal delay-700">
                         Πιστεύω βαθιά ότι η ψυχοθεραπεία αποτελεί μια διαδικασία ουσιαστικής σύνδεσης, κατανόησης και προσωπικής εξέλιξης. Στόχος μου είναι να συνοδεύω κάθε άνθρωπο με σεβασμό, επαγγελματισμό και συνέπεια στη δική του μοναδική πορεία.
                     </p>
                 </div>
@@ -275,11 +272,11 @@
             </div>
 
             <div class="bg-white p-8 md:p-14 shadow-sm border border-espresso/5 rounded-2xl reveal delay-100">
-                <p class="text-lg md:text-xl font-light leading-relaxed text-black/80 mb-10 text-justify">
+                <p class="text-[16px] font-light leading-relaxed text-black/80 mb-10 text-justify">
                     Η ψυχοθεραπεία είναι πάνω απ’ όλα μια σχέση εμπιστοσύνης. Ένας ασφαλής χώρος όπου μπορεί κανείς να μιλήσει ελεύθερα για τις σκέψεις, τα συναισθήματα και τις δυσκολίες του χωρίς φόβο ή κριτική. Η βασική μου προσέγγιση είναι ψυχοδυναμική, ενώ παράλληλα δουλεύω συνθετικά, προσαρμόζοντας τη θεραπευτική διαδικασία στις ανάγκες και τη μοναδικότητα κάθε ανθρώπου. Για μένα, η θεραπευτική σχέση αποτελεί το θεμέλιο της αλλαγής. Μέσα από την κατανόηση, την αποδοχή και τον ανοιχτό διάλογο δημιουργείται ένας χώρος όπου μπορεί κανείς να γνωρίσει βαθύτερα τον εαυτό του και να ανακαλύψει νέους τρόπους να σχετίζεται με τη ζωή και τους άλλους. Στο θεραπευτικό πλαίσιο υπάρχει χώρος για αυθεντική έκφραση, σκέψη και επεξεργασία της προσωπικής εμπειρίας, με στόχο μια πιο ουσιαστική και ισορροπημένη καθημερινότητα.
                 </p>
                 <div class="text-center md:text-left">
-                    <a href="#contact" class="inline-block hover-trigger bg-cypress text-white px-10 py-4 rounded-full text-sm font-medium hover:bg-opacity-90 transition-all shadow-md">
+                    <a href="#contact" class="inline-block hover-trigger bg-cypress text-white px-10 py-4 rounded-full text-[16px] hover:bg-opacity-90 transition-all shadow-md">
                         Κλείσε ραντεβού
                     </a>
                 </div>
@@ -293,12 +290,12 @@
                 <h2 class="text-4xl md:text-6xl font-serif text-black leading-tight mb-6">
                     Συνεδρίες εξ αποστάσεως
                 </h2>
-                <p class="text-black/80 font-light text-xl border-l-2 border-cypress pl-4">Η ψυχική υγεία είναι προτεραιότητα όπου και αν βρίσκεστε.</p>
+                <p class="text-black/80 font-light text-[16px] border-l-2 border-cypress pl-4">Η ψυχική υγεία είναι προτεραιότητα όπου και αν βρίσκεστε.</p>
             </div>
             
             <div class="w-full md:w-1/2 p-12 md:p-24 bg-sand/20 flex flex-col justify-center reveal delay-200 hover-trigger">
                 <h3 class="text-2xl md:text-4xl font-serif text-black mb-8 pb-4 border-b border-espresso/10">Online θεραπεία</h3>
-                <p class="text-black/80 font-light leading-relaxed text-lg mb-8">
+                <p class="text-black/80 font-light leading-relaxed text-[16px] mb-8">
                     Η απόσταση δεν αποτελεί πλέον εμπόδιο. Μέσω ασφαλούς πλατφόρμας βιντεοκλήσης, παρέχω ολοκληρωμένη θεραπευτική υποστήριξη σε άτομα που βρίσκονται εκτός Αθηνών ή στο εξωτερικό, καθώς και σε όσους έχουν περιορισμένο χρόνο.
                 </p>
                 <div class="flex gap-4 items-center">
@@ -313,7 +310,7 @@
     <section id="services" class="py-32 bg-cream">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-20 reveal">
-                <span class="text-sm font-sans text-black/50 block mb-2">Τομείς εξειδίκευσης</span>
+                <span class="text-[16px] font-serif text-black/50 block mb-2">Τομείς εξειδίκευσης</span>
                 <h2 class="text-5xl md:text-7xl font-serif text-cypress">Υπηρεσίες</h2>
             </div>
 
@@ -332,7 +329,7 @@
                         
                         <div class="service-accordion">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 pb-4">
-                                <div class="text-black/80 font-light leading-relaxed text-base text-justify space-y-4">
+                                <div class="text-black/80 font-light leading-relaxed text-[16px] text-justify space-y-4">
                                     <p>Το ταξίδι της ψυχής συχνά μας φέρνει αντιμέτωπους με προκλήσεις που δοκιμάζουν την αντοχή μας, συναισθηματικές δυσκολίες ή απρόσμενες αλλαγές στη ζωή μας. Σε αυτές τις στιγμές καλούμαστε να πάρουμε αποφάσεις, να αντιμετωπίσουμε συγκρούσεις ή να διαχειριστούμε συναισθήματα όπως η θλίψη, η ανησυχία ή ο θυμός. Η ψυχοθεραπευτική διαδικασία προσφέρει έναν ασφαλή χώρο, όπου μπορούμε να εκφράσουμε όσα μας βαραίνουν, να επεξεργαστούμε προσωπικά βιώματα και να εξερευνήσουμε τους φόβους και τις ανησυχίες που πολλές φορές μένουν αθέατοι.</p>
                                     <p>Κεντρικό στοιχείο για την ανάπτυξη εμπιστοσύνης είναι η δημιουργία μιας σταθερής θεραπευτικής σχέσης, μιας συνεργασίας ανάμεσα στον θεραπευτή και τον θεραπευόμενο. Μέσα σε αυτήν τη σχέση, το άτομο μπορεί να νιώσει σιγά-σιγά ασφαλές να ανοιχτεί, να παρατηρήσει τον εαυτό του και να διερευνήσει όσα το απασχολούν. Η ψυχοδυναμική προσέγγιση μας καλεί να δούμε τον εαυτό μας σε όλες τις διαστάσεις του, παρελθόν, παρόν και μέλλον, να ανασύρουμε μνήμες και να αναγνωρίσουμε επαναλαμβανόμενα μοτίβα, ώστε να πλησιάσουμε στην εσωτερική μας αλήθεια στο εδώ και τώρα.</p>
                                     <p>Καθ’ όλη τη διάρκεια αυτής της ψυχοθεραπευτικής διαδικασίας, ο θεραπευόμενος έχει την ευκαιρία, με την καθοδήγηση του θεραπευτή, να εντοπίσει δυσλειτουργικά μοτίβα και συμπεριφορές που τον έχουν οδηγήσει σε ψυχική δυσφορία. Ο θεραπευτής λειτουργεί ως «καθρέφτης», αντανακλώντας τις βαθύτερες ανάγκες και επιθυμίες του ατόμου, χωρίς να επιβάλλει λύσεις, αλλά αναγνωρίζοντας και ενισχύοντας τη δυναμική που κάθε άνθρωπος φέρει μέσα του.</p>
@@ -359,14 +356,14 @@
                         
                         <div class="service-accordion">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 pb-4">
-                                <div class="text-black/80 font-light leading-relaxed text-base text-justify space-y-4">
+                                <div class="text-black/80 font-light leading-relaxed text-[16px] text-justify space-y-4">
                                     <p>Η εφηβική ηλικία αποτελεί μια μοναδική και απαιτητική περίοδο στη ζωή του ανθρώπου, κατά την οποία συμβαίνουν έντονες αλλαγές, τόσο σωματικές όσο και ψυχοσυναισθηματικές. Είναι η στιγμή που ο έφηβος καλείται να αφήσει πίσω την παιδικότητα και να βρει τον δικό του δρόμο προς την αυτονομία και την ανεξαρτησία.</p>
                                     <p>Καθ’ αυτό το πέρασμα, τα συναισθήματα του εφήβου συχνά γίνονται αντιφατικά και έντονα. Η επιθυμία για ανεξαρτησία συνυπάρχει με την ανάγκη για υποστήριξη, δημιουργώντας ένταση, αμφιθυμία και συχνά απογοήτευση. Αυτές οι εσωτερικές συγκρούσεις μπορούν να εκδηλωθούν ως ευερεθιστότητα, νευρικότητα ή απομόνωση, κάνοντας τον έφηβο να νιώθει ότι κανείς δεν τον καταλαβαίνει. Παράλληλα, οι συνεχείς συναισθηματικές μεταβολές επηρεάζουν και την οικογενειακή δυναμική, με αποτέλεσμα να εμφανίζονται εντάσεις ή συγκρούσεις στο σπίτι.</p>
                                     <p>Η ψυχοθεραπεία εφήβων προσφέρει έναν ασφαλή, φροντιστικό και υποστηρικτικό χώρο, όπου ο έφηβος μπορεί να εκφραστεί ελεύθερα, να μοιραστεί ανησυχίες, να αποφορτιστεί από δύσκολα συναισθήματα και να νιώσει την αποδοχή που χρειάζεται για να εμπιστευτεί τη διαδικασία. Σταδιακά, με σεβασμό στην προσωπική ετοιμότητα του εφήβου, ανοίγεται ο δρόμος για την καλλιέργεια της αυτογνωσίας και την ανάπτυξη της προσωπικής του ταυτότητας. Ο θεραπευτής λειτουργεί επίσης ως συνδετικός κρίκος μεταξύ εφήβου και οικογένειας, πάντα με σεβασμό στο απόρρητο και στη σχέση εμπιστοσύνης που έχει δημιουργηθεί. Όταν προκύπτουν ζητήματα ενδοοικογενειακής φύσης, η επικοινωνία με τους γονείς γίνεται με γνώμονα την ισορροπία ανάμεσα στην υποστήριξη του εφήβου και τη διατήρηση του προσωπικού του χώρου.</p>
                                     
                                     <div class="bg-white p-6 rounded-xl border border-sand shadow-sm mt-6">
-                                        <p class="font-medium text-cypress mb-4 text-sm">Συχνά οι έφηβοι και οι οικογένειες απευθύνονται για ψυχοθεραπευτική υποστήριξη με αιτήματα που περιλαμβάνουν:</p>
-                                        <ul class="list-disc pl-5 space-y-1 text-sm text-black/70 marker:text-cypress">
+                                        <p class="font-medium text-cypress mb-4 text-[16px]">Συχνά οι έφηβοι και οι οικογένειες απευθύνονται για ψυχοθεραπευτική υποστήριξη με αιτήματα που περιλαμβάνουν:</p>
+                                        <ul class="list-disc pl-5 space-y-1 text-[16px] text-black/70 marker:text-cypress">
                                             <li>Διαχείριση άγχους και φοβιών</li>
                                             <li>Σχολικές επιδόσεις</li>
                                             <li>Έλλειψη αυτοπεποίθησης/ Ενίσχυση εαυτού</li>
@@ -378,11 +375,11 @@
                                             <li>Εθιστικές συμπεριφορές</li>
                                             <li>Ευερεθιστότητα και εκρήξεις θυμού</li>
                                         </ul>
-                                        <p class="mt-4 text-sm font-medium text-cypress">Με την κατάλληλη ψυχοθεραπευτική υποστήριξη, ο έφηβος μπορεί να βρει σταθερότητα, να κατανοήσει καλύτερα τα συναισθήματά του και να αναπτύξει δεξιότητες για να διαχειρίζεται με περισσότερη αυτοπεποίθηση τις προκλήσεις της εφηβείας.</p>
+                                        <p class="mt-4 text-[16px] font-medium text-cypress">Με την κατάλληλη ψυχοθεραπευτική υποστήριξη, ο έφηβος μπορεί να βρει σταθερότητα, να κατανοήσει καλύτερα τα συναισθήματά του και να αναπτύξει δεξιότητες για να διαχειρίζεται με περισσότερη αυτοπεποίθηση τις προκλήσεις της εφηβείας.</p>
                                     </div>
                                 </div>
                                 <div class="w-full h-64 md:h-full min-h-[300px] rounded-2xl overflow-hidden border border-espresso/5 shadow-inner">
-                                    <img src="https://raw.githubusercontent.com/agelmet/SARLAKI/refs/heads/main/9879.jpg" alt="Ψυχοθεραπεία εφήβων" class="w-full h-full object-cover">
+                                    <img src="https://raw.githubusercontent.com/agelmet/SARLAKI/refs/heads/main/9879.jpg" alt="Ψυχοθεραπεία εφήβων" class="w-full h-full object-cover object-top">
                                 </div>
                             </div>
                         </div>
@@ -402,7 +399,7 @@
                         
                         <div class="service-accordion">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 pb-4">
-                                <div class="text-black/80 font-light leading-relaxed text-base text-justify space-y-4">
+                                <div class="text-black/80 font-light leading-relaxed text-[16px] text-justify space-y-4">
                                     <p>Η συμβουλευτική γονέων και οικογένειας προσφέρει έναν ασφαλή χώρο όπου οι γονείς μπορούν να εκφράσουν τους προβληματισμούς και τις ανησυχίες τους σχετικά με τη σχέση τους με το παιδί. Μέσα στις συνεδρίες εξετάζονται διεξοδικά και με σεβασμό στις ιδιαίτερες ανάγκες κάθε οικογένειας ζητήματα όπως η διαχείριση συμπεριφορών, οι ψυχοσυναισθηματικές προκλήσεις που μπορεί να αντιμετωπίζει το παιδί, καθώς και η κατανόηση των αναπτυξιακών σταδίων και των απαιτήσεων που αυτά φέρνουν.</p>
                                     <p>Κατά τη διάρκεια των συνεδριών, οι γονείς έχουν την ευκαιρία να αναστοχαστούν πάνω στα δικά τους συναισθήματα και αντιδράσεις, να εμβαθύνουν στη σχέση τους με το παιδί και να ενισχυθούν στον γονεϊκό τους ρόλο. Μέσα από την καθοδήγηση και τις στρατηγικές που παρέχει η συμβουλευτική, αποκτούν πρακτικά «ψυχικά εργαλεία» για να αντιμετωπίζουν με μεγαλύτερη σιγουριά και αποτελεσματικότητα τις καθημερινές προκλήσεις της γονεϊκότητας.</p>
                                     <p>Οι συνεδρίες μπορούν να πραγματοποιούνται είτε μεμονωμένα, επικεντρωμένες στις ανάγκες των γονέων, είτε ως συμπληρωματικό μέρος ενός ευρύτερου ψυχοθεραπευτικού προγράμματος που παρακολουθεί το παιδί, προσφέροντας μια ολοκληρωμένη υποστήριξη στην οικογένεια.</p>
@@ -428,7 +425,7 @@
                         
                         <div class="service-accordion">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 pb-4">
-                                <div class="text-black/80 font-light leading-relaxed text-base text-justify space-y-4">
+                                <div class="text-black/80 font-light leading-relaxed text-[16px] text-justify space-y-4">
                                     <p>Οι διαδικτυακές συνεδρίες συμβουλευτικής και ψυχοθεραπείας προσφέρουν έναν ασφαλή και ευέλικτο τρόπο υποστήριξης, για όσους αντιμετωπίζουν δυσκολίες προσέλευσης στο φυσικό χώρο του γραφείου. Αυτό μπορεί να οφείλεται σε γεωγραφική απόσταση, είτε διαμένετε σε άλλη πόλη είτε στο εξωτερικό ή σε ζητήματα κινητικότητας και υγείας που καθιστούν δύσκολη τη φυσική παρουσία.</p>
                                     <p>Η επικοινωνία μέσω βίντεο-συνομιλίας μπορεί να είναι εξίσου αποτελεσματική και αποδοτική όσο οι δια ζώσης συνεδρίες, προσφέροντας τη δυνατότητα στους θεραπευόμενους να συνεχίσουν τη διαδικασία υποστήριξης χωρίς να χρειάζεται να μετακινηθούν. Το πλαίσιο των online συνεδριών τηρεί πλήρως τις αρχές δεοντολογίας και τους κανόνες απορρήτου που εφαρμόζονται και στις συνεδρίες στο γραφείο, διασφαλίζοντας την εμπιστευτικότητα και την ασφάλεια του θεραπευόμενου.</p>
                                     <p>Εάν νιώθετε ότι αυτή τη στιγμή μια διαδικτυακή συνεδρία μπορεί να καλύψει τις ανάγκες σας, μπορείτε να επικοινωνήσετε για να συζητήσουμε πώς μπορεί να οργανωθεί η διαδικασία και να υποστηριχθεί με τον καλύτερο δυνατό τρόπο η ψυχοθεραπευτική σας πορεία.</p>
@@ -445,19 +442,11 @@
         </div>
     </section>
 
-    <section class="h-[60vh] flex items-center justify-center relative overflow-hidden parallax-bg" style="background-image: url('https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/699fe937753f1525e02e47c8.jpg');">
-        <div class="absolute inset-0 bg-black/30"></div>
-        <div class="relative z-10 w-full px-4 text-center reveal flex flex-col items-center">
-            <h2 class="text-5xl md:text-7xl font-serif text-cream drop-shadow-md w-full mb-4">Ισορροπία</h2>
-            <p class="text-cream/90 font-light text-lg md:text-xl border-b border-cream/30 inline-block pb-2">Εναρμόνιση σκέψης και συναισθήματος</p>
-        </div>
-    </section>
-
     <section id="blog" class="py-24 bg-cream border-b border-espresso/10">
         <div class="max-w-7xl mx-auto px-6 reveal">
             <div class="flex justify-between items-end mb-12 border-b border-espresso/10 pb-6">
                 <h2 class="text-4xl md:text-5xl font-serif text-cypress">Blog</h2>
-                <a href="#" class="text-sm font-medium hover:text-cypress transition-colors hidden md:inline-block">Δείτε όλα τα άρθρα →</a>
+                <a href="#" class="text-[16px] font-medium hover:text-cypress transition-colors hidden md:inline-block">Δείτε όλα τα άρθρα →</a>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -465,48 +454,54 @@
                     <div class="h-64 bg-sand/30 rounded-xl border border-espresso/5 mb-4 overflow-hidden flex items-center justify-center text-espresso/20">
                         <i data-lucide="book-open" class="w-10 h-10 group-hover:scale-110 transition-transform"></i>
                     </div>
-                    <p class="text-xs text-black/50 mb-2">Σύντομα κοντά σας</p>
+                    <p class="text-[16px] text-black/50 mb-2">Σύντομα κοντά σας</p>
                     <h3 class="text-xl font-serif text-black group-hover:text-cypress transition-colors">Νέο άρθρο προς δημοσίευση</h3>
                 </div>
                 <div class="group cursor-pointer">
                     <div class="h-64 bg-sand/30 rounded-xl border border-espresso/5 mb-4 overflow-hidden flex items-center justify-center text-espresso/20">
                         <i data-lucide="book-open" class="w-10 h-10 group-hover:scale-110 transition-transform"></i>
                     </div>
-                    <p class="text-xs text-black/50 mb-2">Σύντομα κοντά σας</p>
+                    <p class="text-[16px] text-black/50 mb-2">Σύντομα κοντά σας</p>
                     <h3 class="text-xl font-serif text-black group-hover:text-cypress transition-colors">Νέο άρθρο προς δημοσίευση</h3>
                 </div>
                 <div class="group cursor-pointer">
                     <div class="h-64 bg-sand/30 rounded-xl border border-espresso/5 mb-4 overflow-hidden flex items-center justify-center text-espresso/20">
                         <i data-lucide="book-open" class="w-10 h-10 group-hover:scale-110 transition-transform"></i>
                     </div>
-                    <p class="text-xs text-black/50 mb-2">Σύντομα κοντά σας</p>
+                    <p class="text-[16px] text-black/50 mb-2">Σύντομα κοντά σας</p>
                     <h3 class="text-xl font-serif text-black group-hover:text-cypress transition-colors">Νέο άρθρο προς δημοσίευση</h3>
                 </div>
             </div>
-            <a href="#" class="text-sm font-medium hover:text-cypress transition-colors inline-block mt-8 md:hidden">Δείτε όλα τα άρθρα →</a>
+            <a href="#" class="text-[16px] font-medium hover:text-cypress transition-colors inline-block mt-8 md:hidden">Δείτε όλα τα άρθρα →</a>
         </div>
     </section>
 
     <section id="contact" class="py-24 bg-sand/10 border-b border-espresso/10">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center reveal">
             <div>
-                <h2 class="text-5xl md:text-6xl font-serif text-cypress mb-6">Ας μιλήσουμε</h2>
-                <p class="text-xl text-black/80 font-light mb-10 max-w-lg leading-relaxed">
+                <h2 class="text-5xl md:text-6xl font-serif text-cypress mb-4">Ας μιλήσουμε</h2>
+                <p class="text-[16px] text-black/80 font-light mb-10 max-w-lg leading-relaxed">
                     Κάντε σήμερα το πρώτο βήμα προς την προσωπική σας εξέλιξη και την ψυχική σας ενδυνάμωση.
                 </p>
-                <a href="tel:6932223426" class="inline-block hover-trigger bg-cypress text-white px-10 py-4 rounded-full font-medium hover:bg-opacity-90 transition-all shadow-md">
-                    Κλείστε ραντεβού
-                </a>
+                
+                <form action="https://formspree.io/f/mdapnjnk" method="POST" class="space-y-4 w-full max-w-md">
+                    <input type="text" name="name" placeholder="Ονοματεπώνυμο" required class="w-full px-6 py-4 rounded-xl border border-espresso/20 bg-white/50 focus:outline-none focus:border-cypress text-black font-serif text-[16px]">
+                    <input type="email" name="email" placeholder="Email" required class="w-full px-6 py-4 rounded-xl border border-espresso/20 bg-white/50 focus:outline-none focus:border-cypress text-black font-serif text-[16px]">
+                    <textarea name="message" placeholder="Το μήνυμά σας" rows="4" required class="w-full px-6 py-4 rounded-xl border border-espresso/20 bg-white/50 focus:outline-none focus:border-cypress text-black font-serif text-[16px] resize-none"></textarea>
+                    <button type="submit" class="w-full hover-trigger bg-cypress text-white px-10 py-4 rounded-full font-medium hover:bg-opacity-90 transition-all shadow-md text-[16px]">
+                        Κλείστε ραντεβού
+                    </button>
+                </form>
             </div>
             
             <div class="flex flex-col sm:flex-row items-center sm:items-start gap-8 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-espresso/5 w-full">
                 <div class="w-40 h-40 md:w-48 md:h-48 shrink-0 rounded-full overflow-hidden border-[6px] border-sand/30 shadow-inner group">
-                    <img src="https://github.com/agelmet/SARLAKI/blob/main/1111.jpg?raw=true" referrerpolicy="no-referrer" alt="Μάιρα Σαρλάκη" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <img src="https://github.com/agelmet/SARLAKI/blob/main/1111.jpg?raw=true" referrerpolicy="no-referrer" alt="Μάιρα Σαρλάκη" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
                 </div>
                 <div class="flex flex-col gap-4 text-center sm:text-left w-full mt-2">
                     <div>
                         <h3 class="text-3xl font-serif text-cypress">Μάιρα Σαρλάκη</h3>
-                        <p class="text-sm text-black/60 mt-1">Ψυχολόγος-ΜΑ Ψυχοθεραπεύτρια</p>
+                        <p class="text-[16px] text-black/60 mt-1">Ψυχολόγος-ΜΑ Ψυχοθεραπεύτρια</p>
                     </div>
                     
                     <div class="w-12 h-px bg-sand mx-auto sm:mx-0 my-1"></div>
@@ -514,16 +509,16 @@
                     <div class="space-y-4">
                         <a href="tel:6932223426" class="flex items-center justify-center sm:justify-start gap-3 text-black/80 hover:text-cypress transition-colors hover-trigger">
                             <div class="w-8 h-8 rounded-full bg-sand/30 flex items-center justify-center"><i data-lucide="phone" class="w-4 h-4 text-cypress"></i></div>
-                            <span class="font-medium">6932223426</span>
+                            <span class="font-medium text-[16px]">6932223426</span>
                         </a>
                         <a href="mailto:sarlakimaira@gmail.com" class="flex items-center justify-center sm:justify-start gap-3 text-black/80 hover:text-cypress transition-colors hover-trigger">
                             <div class="w-8 h-8 rounded-full bg-sand/30 flex items-center justify-center"><i data-lucide="mail" class="w-4 h-4 text-cypress"></i></div>
-                            <span class="font-medium text-sm md:text-base">sarlakimaira@gmail.com</span>
+                            <span class="font-medium text-[16px]">sarlakimaira@gmail.com</span>
                         </a>
                     </div>
                     
                     <div class="flex gap-6 mt-4 justify-center sm:justify-start">
-                        <a href="https://www.facebook.com/profile.php?id=100089851234567" target="_blank" class="hover-trigger transition-transform hover:scale-110 drop-shadow-sm">
+                        <a href="https://www.facebook.com/profile.php?id=61557008567855" target="_blank" class="hover-trigger transition-transform hover:scale-110 drop-shadow-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none">
                                 <circle cx="12" cy="12" r="12" fill="#1877F2"/>
                                 <path d="M15.4 11.5L16 8h-3V6c0-.8.4-1.5 2-1.5h1V1.5c-.3 0-1.2-.1-2.4-.1-2.5 0-4.1 1.5-4.1 4.2V8H7v3.5h2.5V23a12.1 12.1 0 005 0V11.5h1.9z" fill="#FFF"/>
@@ -557,7 +552,7 @@
 
     <section id="reviews" class="py-32 bg-cream text-black overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-6 mb-16 text-center reveal">
-            <span class="text-sm font-sans text-black/50 block mb-2">Η φωνή των θεραπευόμενων</span>
+            <span class="text-[16px] font-serif text-black/50 block mb-2">Η φωνή των θεραπευόμενων</span>
             <h2 class="text-5xl md:text-7xl font-serif text-cypress">Αξιολογήσεις</h2>
         </div>
 
@@ -572,11 +567,11 @@
                         <div>
                             <div class="flex items-center gap-3 mb-8 border-b border-espresso/10 pb-4">
                                 <span class="text-4xl font-serif text-cypress font-bold">10.0</span>
-                                <span class="text-yellow-500 text-sm tracking-widest">★★★★★</span>
+                                <span class="text-yellow-500 text-[16px] tracking-widest">★★★★★</span>
                             </div>
                             <p class="text-black/80 font-light text-lg italic leading-relaxed mb-8">"Καταπληκτική εμπειρία την συστήνω ανεπιφύλακτα"</p>
                         </div>
-                        <div class="flex justify-between items-end text-xs text-black/40 font-sans">
+                        <div class="flex justify-between items-end text-[16px] text-black/40 font-serif">
                             <span>Eleni • 1 Αξιολόγηση</span>
                             <span>07 Απρ 2025</span>
                         </div>
@@ -586,11 +581,11 @@
                         <div>
                             <div class="flex items-center gap-3 mb-8 border-b border-espresso/10 pb-4">
                                 <span class="text-4xl font-serif text-cypress font-bold">10.0</span>
-                                <span class="text-yellow-500 text-sm tracking-widest">★★★★★</span>
+                                <span class="text-yellow-500 text-[16px] tracking-widest">★★★★★</span>
                             </div>
                             <p class="text-black/80 font-light text-lg italic leading-relaxed mb-8">"Απόλυτα καταρτισμένη, ευγενική και ευχάριστη προσωπικότητα. Μου ενέπνευσε εμπιστοσύνη απο το πρώτο λεπτό."</p>
                         </div>
-                        <div class="flex justify-between items-end text-xs text-black/40 font-sans">
+                        <div class="flex justify-between items-end text-[16px] text-black/40 font-serif">
                             <span>Stelios • 1 Αξιολόγηση</span>
                             <span>27 Μαρ 2025</span>
                         </div>
@@ -600,11 +595,11 @@
                         <div>
                             <div class="flex items-center gap-3 mb-8 border-b border-espresso/10 pb-4">
                                 <span class="text-4xl font-serif text-cypress font-bold">10.0</span>
-                                <span class="text-yellow-500 text-sm tracking-widest">★★★★★</span>
+                                <span class="text-yellow-500 text-[16px] tracking-widest">★★★★★</span>
                             </div>
                             <p class="text-black/80 font-light text-lg italic leading-relaxed mb-8">"Completely satisfied !!!! Has the ability to make you realise how handle the problem."</p>
                         </div>
-                        <div class="flex justify-between items-end text-xs text-black/40 font-sans">
+                        <div class="flex justify-between items-end text-[16px] text-black/40 font-serif">
                             <span>Carol • 1 Αξιολόγηση</span>
                             <span>11 Μαρ 2025</span>
                         </div>
@@ -614,11 +609,11 @@
                         <div>
                             <div class="flex items-center gap-3 mb-8 border-b border-espresso/10 pb-4">
                                 <span class="text-4xl font-serif text-cypress font-bold">10.0</span>
-                                <span class="text-yellow-500 text-sm tracking-widest">★★★★★</span>
+                                <span class="text-yellow-500 text-[16px] tracking-widest">★★★★★</span>
                             </div>
                             <p class="text-black/80 font-light text-lg italic leading-relaxed mb-8">"Ηταν η πρώτη φορά που επισκέφτηκα ψυχολόγο... ήταν τα μόνα χρήματα που έδωσα με χαρά... Είστε εξαιρετική!!!"</p>
                         </div>
-                        <div class="flex justify-between items-end text-xs text-black/40 font-sans">
+                        <div class="flex justify-between items-end text-[16px] text-black/40 font-serif">
                             <span>Ευθυμία • 1 Αξιολόγηση</span>
                             <span>09 Μαρ 2025</span>
                         </div>
@@ -628,11 +623,11 @@
                         <div>
                             <div class="flex items-center gap-3 mb-8 border-b border-espresso/10 pb-4">
                                 <span class="text-4xl font-serif text-cypress font-bold">10.0</span>
-                                <span class="text-yellow-500 text-sm tracking-widest">★★★★★</span>
+                                <span class="text-yellow-500 text-[16px] tracking-widest">★★★★★</span>
                             </div>
                             <p class="text-black/80 font-light text-lg italic leading-relaxed mb-8">"Αψογη επαγγελματίας και συνεπέστατη στο ραντεβού μας. Πρόσχαρη και αρκετά φιλική, ένιωσα πολύ οικεία!"</p>
                         </div>
-                        <div class="flex justify-between items-end text-xs text-black/40 font-sans">
+                        <div class="flex justify-between items-end text-[16px] text-black/40 font-serif">
                             <span>Νένα • 1 Αξιολόγηση</span>
                             <span>08 Μαρ 2025</span>
                         </div>
@@ -642,11 +637,11 @@
                         <div>
                             <div class="flex items-center gap-3 mb-8 border-b border-espresso/10 pb-4">
                                 <span class="text-4xl font-serif text-cypress font-bold">10.0</span>
-                                <span class="text-yellow-500 text-sm tracking-widest">★★★★★</span>
+                                <span class="text-yellow-500 text-[16px] tracking-widest">★★★★★</span>
                             </div>
                             <p class="text-black/80 font-light text-lg italic leading-relaxed mb-8">"Παρά πολύ καλή στην δουλειά της. Εάν θέλετε να δοκίμασετε κάποιους ψυχολόγους... σίγουρα είναι μια από τις καλύτερες επιλογές σας"</p>
                         </div>
-                        <div class="flex justify-between items-end text-xs text-black/40 font-sans">
+                        <div class="flex justify-between items-end text-[16px] text-black/40 font-serif">
                             <span>Παναγιώτης • 1 Αξιολόγηση</span>
                             <span>07 Μαρ 2025</span>
                         </div>
@@ -656,11 +651,11 @@
                         <div>
                             <div class="flex items-center gap-3 mb-8 border-b border-espresso/10 pb-4">
                                 <span class="text-4xl font-serif text-cypress font-bold">10.0</span>
-                                <span class="text-yellow-500 text-sm tracking-widest">★★★★★</span>
+                                <span class="text-yellow-500 text-[16px] tracking-widest">★★★★★</span>
                             </div>
                             <p class="text-black/80 font-light text-lg italic leading-relaxed mb-8">"Γνωρισα και εμπιστευθηκα την κα Σαρλακη την οποια θεωρω μια εξαιρετικη επαγγελματια."</p>
                         </div>
-                        <div class="flex justify-between items-end text-xs text-black/40 font-sans">
+                        <div class="flex justify-between items-end text-[16px] text-black/40 font-serif">
                             <span>Χαρα • 1 Αξιολόγηση</span>
                             <span>07 Μαρ 2025</span>
                         </div>
@@ -672,11 +667,11 @@
                         <div>
                             <div class="flex items-center gap-3 mb-8 border-b border-espresso/10 pb-4">
                                 <span class="text-4xl font-serif text-cypress font-bold">10.0</span>
-                                <span class="text-yellow-500 text-sm tracking-widest">★★★★★</span>
+                                <span class="text-yellow-500 text-[16px] tracking-widest">★★★★★</span>
                             </div>
                             <p class="text-black/80 font-light text-lg italic leading-relaxed mb-8">"Καταπληκτική εμπειρία την συστήνω ανεπιφύλακτα"</p>
                         </div>
-                        <div class="flex justify-between items-end text-xs text-black/40 font-sans">
+                        <div class="flex justify-between items-end text-[16px] text-black/40 font-serif">
                             <span>Eleni • 1 Αξιολόγηση</span>
                             <span>07 Απρ 2025</span>
                         </div>
@@ -686,11 +681,11 @@
                         <div>
                             <div class="flex items-center gap-3 mb-8 border-b border-espresso/10 pb-4">
                                 <span class="text-4xl font-serif text-cypress font-bold">10.0</span>
-                                <span class="text-yellow-500 text-sm tracking-widest">★★★★★</span>
+                                <span class="text-yellow-500 text-[16px] tracking-widest">★★★★★</span>
                             </div>
                             <p class="text-black/80 font-light text-lg italic leading-relaxed mb-8">"Απόλυτα καταρτισμένη, ευγενική και ευχάριστη προσωπικότητα. Μου ενέπνευσε εμπιστοσύνη απο το πρώτο λεπτό."</p>
                         </div>
-                        <div class="flex justify-between items-end text-xs text-black/40 font-sans">
+                        <div class="flex justify-between items-end text-[16px] text-black/40 font-serif">
                             <span>Stelios • 1 Αξιολόγηση</span>
                             <span>27 Μαρ 2025</span>
                         </div>
@@ -700,11 +695,11 @@
                         <div>
                             <div class="flex items-center gap-3 mb-8 border-b border-espresso/10 pb-4">
                                 <span class="text-4xl font-serif text-cypress font-bold">10.0</span>
-                                <span class="text-yellow-500 text-sm tracking-widest">★★★★★</span>
+                                <span class="text-yellow-500 text-[16px] tracking-widest">★★★★★</span>
                             </div>
                             <p class="text-black/80 font-light text-lg italic leading-relaxed mb-8">"Completely satisfied !!!! Has the ability to make you realise how handle the problem."</p>
                         </div>
-                        <div class="flex justify-between items-end text-xs text-black/40 font-sans">
+                        <div class="flex justify-between items-end text-[16px] text-black/40 font-serif">
                             <span>Carol • 1 Αξιολόγηση</span>
                             <span>11 Μαρ 2025</span>
                         </div>
@@ -715,7 +710,7 @@
     </section>
 
     <footer class="bg-cream py-6 border-t border-espresso/10 text-center">
-        <p class="text-xs text-black/40 font-sans">
+        <p class="text-[16px] text-black/60 font-serif">
             Designed by <a href="https://advonmedia.com" target="_blank" class="hover-trigger font-medium hover:text-cypress transition-colors">Advon Media</a>
         </p>
     </footer>
@@ -725,7 +720,7 @@
             <img id="modal-img" src="" alt="Full size" class="max-h-full max-w-full object-contain shadow-2xl scale-95 transition-transform duration-500 delay-100">
             <button class="hover-trigger absolute top-8 right-8 text-black hover:text-cypress hover:scale-90 transition-all flex flex-col items-center gap-1" onclick="closeModal()">
                 <i data-lucide="x" class="w-10 h-10"></i>
-                <span class="text-xs font-medium">Κλείσιμο</span>
+                <span class="text-[16px] font-serif font-medium">Κλείσιμο</span>
             </button>
         </div>
     </div>
