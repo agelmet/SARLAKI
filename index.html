@@ -736,8 +736,26 @@
         </div>
     </div>
 
+    <div id="article-modal" class="fixed inset-0 z-[120] bg-espresso/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-all duration-500">
+        <div id="article-modal-content" class="relative w-full max-w-4xl max-h-[90vh] bg-cream rounded-3xl shadow-2xl overflow-hidden flex flex-col scale-95 transition-transform duration-500 delay-100">
+            <div class="flex justify-between items-center p-6 border-b border-espresso/10 bg-white/50">
+                <span id="modal-article-date" class="text-xs text-cypress/60 font-sans tracking-widest uppercase"></span>
+                <button class="hover-trigger text-black hover:text-cypress transition-colors" onclick="closeArticleModal()">
+                    <i data-lucide="x" class="w-8 h-8"></i>
+                </button>
+            </div>
+            <div class="p-8 md:p-12 overflow-y-auto custom-scrollbar">
+                <h2 id="modal-article-title" class="text-4xl md:text-5xl font-serif text-cypress mb-8"></h2>
+                <div id="modal-article-body" class="text-[16px] text-black/80 font-light leading-relaxed space-y-4 text-justify font-serif">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Contentful Integration
+        // Global dict to hold full article text dynamically loaded
+        window.articlesData = {};
+
         const client = contentful.createClient({
             space: 'gfa7wmmahyi7', 
             accessToken: 'WwRW63oLlNjXc7B_WG7XfdYa0Vqd-r_SsTIrNXqK6zs',
@@ -756,7 +774,7 @@
                 return field.content.map(node => {
                     if (node.nodeType === 'paragraph') {
                         const text = node.content.map(c => c.value).join('');
-                        return `<p class="mb-2">${text}</p>`;
+                        return `<p class="mb-4">${text}</p>`;
                     }
                     return ''; 
                 }).join('');
@@ -777,12 +795,16 @@
                 container.innerHTML = ""; 
 
                 response.items.forEach(entry => {
+                    const id = entry.sys.id;
                     const title = entry.fields.title || "Χωρίς Τίτλο";
                     const body = renderBody(entry.fields.body); 
                     const date = formatDate(entry.sys.createdAt);
 
+                    // Store article globally to load it in the modal later
+                    window.articlesData[id] = { title, date, body };
+
                     container.innerHTML += `
-                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-espresso/5 hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full hover:shadow-lg group cursor-pointer">
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-espresso/5 hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full hover:shadow-lg group cursor-pointer hover-trigger" onclick="openArticleModal('${id}')">
                             <span class="text-xs text-cypress/60 font-sans tracking-widest uppercase mb-4">${date}</span>
                             <h3 class="text-2xl font-serif text-cypress mb-4 group-hover:text-black transition-colors">${title}</h3>
                             <div class="text-[16px] text-black/80 font-light leading-relaxed line-clamp-4 mb-6 flex-grow overflow-hidden">
@@ -804,6 +826,32 @@
                         Σφάλμα σύνδεσης. (Error: ${error.message})
                     </p>`;
             });
+
+        // Article Modal Handlers
+        function openArticleModal(id) {
+            const article = window.articlesData[id];
+            if(!article) return;
+
+            document.getElementById('modal-article-title').innerText = article.title;
+            document.getElementById('modal-article-date').innerText = article.date;
+            document.getElementById('modal-article-body').innerHTML = article.body;
+
+            const modal = document.getElementById('article-modal');
+            const content = document.getElementById('article-modal-content');
+            
+            modal.style.pointerEvents = 'auto';
+            modal.classList.remove('opacity-0');
+            setTimeout(() => content.classList.remove('scale-95'), 50);
+        }
+
+        function closeArticleModal() {
+            const modal = document.getElementById('article-modal');
+            const content = document.getElementById('article-modal-content');
+            
+            content.classList.add('scale-95');
+            modal.classList.add('opacity-0');
+            modal.style.pointerEvents = 'none';
+        }
 
         // Base Site Logic
         lucide.createIcons();
