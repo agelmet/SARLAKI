@@ -293,7 +293,7 @@
 
             <div class="bg-white p-8 md:p-14 shadow-sm border border-espresso/5 rounded-2xl reveal delay-100">
                 <p class="text-[16px] font-light leading-relaxed text-black/80 mb-10 text-justify">
-                    Η ψυχοθεραπεία είναι πάνω απ’ όλα μια σχέση εμπιστοσύνης. Ένας ασφαλής χώρος όπου μπορεί κανείς να μιλήσει ελεύθερα για τις σκέψεις, τα συναισθήματα και τις δυσκολίες του χωρίς φόβο ή κριτική. Η βασική μου προσέγγιση είναι ψυχοδυναμική, ενώ παράλληλα δουλεύω συνθετικά, προσαρμόζοντας τη θεραπευτική διαδικασία στις ανάγκες και τη μοναδικότητα κάθε ανθρώπου. Για μένα, η θεραπευτική σχέση αποτελεί το θεμέλιο της αλλαγής. Μέσα από την κατανόηση, την αποδοχή και τον ανοιχτό διάλογο δημιουργείται ένας χώρος όπου μπορεί κανείς να γνωρίσει βαθύτερα τον εαυτό του και να ανακαλύψει νέους τρόπους να σχετίζεται με τη ζωή και τους άλλους. Στο θεραπευτικό πλαίσιο υπάρχει χώρος για αυθεντική έκφραση, σκέψη και επεξεργασία της προσωπικής εμπειρίας, με στόχο μια πιο ουσιαστική και ισορροπημένη καθημερινότητα.
+                    Η ψυχοθεραπεία είναι πάνω απ’ όλα μια σχέση εμπιστοσύνης. Ένας ασφαλής χώρος όπου μπορεί κανείς να μιλήσει ελεύθερα για τις σκέψεις, τα συναισθήματα και τις δυσκολίες του χωρίς φόβο ή κριτική. Η βασική μου προσέγγιση είναι ψυχοδυναμική, ενώ παράλληλα δουλεύω συνθετικά, προσαρμόζন্টিς τη θεραπευτική διαδικασία στις ανάγκες και τη μοναδικότητα κάθε ανθρώπου. Για μένα, η θεραπευτική σχέση αποτελεί το θεμέλιο της αλλαγής. Μέσα από την κατανόηση, την αποδοχή και τον ανοιχτό διάλογο δημιουργείται ένας χώρος όπου μπορεί κανείς να γνωρίσει βαθύτερα τον εαυτό του και να ανακαλύψει νέους τρόπους να σχετίζεται με τη ζωή και τους άλλους. Στο θεραπευτικό πλαίσιο υπάρχει χώρος για αυθεντική έκφραση, σκέψη και επεξεργασία της προσωπικής εμπειρίας, με στόχο μια πιο ουσιαστική και ισορροπημένη καθημερινότητα.
                 </p>
                 <div class="text-center md:text-left">
                     <a href="#contact" class="inline-block hover-trigger bg-cypress text-white px-10 py-4 rounded-full text-[16px] hover:bg-opacity-90 transition-all shadow-md">
@@ -737,16 +737,17 @@
     </div>
 
     <div id="article-modal" class="fixed inset-0 z-[120] bg-espresso/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-all duration-500">
-        <div id="article-modal-content" class="relative w-full max-w-4xl max-h-[90vh] bg-cream rounded-3xl shadow-2xl overflow-hidden flex flex-col scale-95 transition-transform duration-500 delay-100">
-            <div class="flex justify-between items-center p-6 border-b border-espresso/10 bg-white/50">
+        <div id="article-modal-content" class="relative w-full max-w-4xl max-h-[90vh] bg-cream rounded-3xl shadow-2xl flex flex-col scale-95 transition-transform duration-500 delay-100 overflow-hidden">
+            <div class="flex justify-between items-center p-6 border-b border-espresso/10 bg-white/50 shrink-0">
                 <span id="modal-article-date" class="text-xs text-cypress/60 font-sans tracking-widest uppercase"></span>
                 <button class="hover-trigger text-black hover:text-cypress transition-colors" onclick="closeArticleModal()">
                     <i data-lucide="x" class="w-8 h-8"></i>
                 </button>
             </div>
-            <div class="p-8 md:p-12 overflow-y-auto custom-scrollbar">
+            
+            <div class="p-8 md:p-12 overflow-y-auto flex-grow" style="max-height: calc(90vh - 80px);">
                 <h2 id="modal-article-title" class="text-4xl md:text-5xl font-serif text-cypress mb-8"></h2>
-                <div id="modal-article-body" class="text-[16px] text-black/80 font-light leading-relaxed space-y-4 text-justify font-serif">
+                <div id="modal-article-body" class="text-[16px] text-black/80 font-light leading-relaxed space-y-6 text-justify font-serif">
                 </div>
             </div>
         </div>
@@ -767,25 +768,94 @@
             return new Date(dateString).toLocaleDateString('el-GR', options);
         }
 
-        function renderBody(field) {
+        // Advanced Rich Text Renderer
+        function renderBody(field, assets = []) {
             if (!field) return ''; 
             
             if (field.nodeType === 'document') { 
                 return field.content.map(node => {
+                    // Render Paragraphs
                     if (node.nodeType === 'paragraph') {
-                        const text = node.content.map(c => c.value).join('');
-                        return `<p class="mb-4">${text}</p>`;
+                        const text = node.content.map(c => {
+                            if (c.nodeType === 'text') {
+                                let output = c.value;
+                                if (c.marks) {
+                                    c.marks.forEach(mark => {
+                                        if(mark.type === 'bold') output = `<strong>${output}</strong>`;
+                                        if(mark.type === 'italic') output = `<em>${output}</em>`;
+                                        if(mark.type === 'underline') output = `<u>${output}</u>`;
+                                    });
+                                }
+                                return output;
+                            }
+                            return '';
+                        }).join('');
+                        return text.trim() ? `<p>${text}</p>` : ''; // Skip empty paragraphs
                     }
+                    
+                    // Render Unordered Lists
+                    if (node.nodeType === 'unordered-list') {
+                        const listItems = node.content.map(li => {
+                            if (li.nodeType === 'list-item') {
+                                // List items usually contain a paragraph node inside
+                                const liContent = li.content.map(p => {
+                                    if(p.nodeType === 'paragraph'){
+                                        return p.content.map(c => c.value).join('');
+                                    }
+                                    return '';
+                                }).join('');
+                                return `<li class="ml-4 list-disc marker:text-cypress">${liContent}</li>`;
+                            }
+                            return '';
+                        }).join('');
+                        return `<ul class="space-y-2 my-4 pl-4">${listItems}</ul>`;
+                    }
+                    
+                    // Render Ordered Lists
+                    if (node.nodeType === 'ordered-list') {
+                        const listItems = node.content.map(li => {
+                            if (li.nodeType === 'list-item') {
+                                const liContent = li.content.map(p => {
+                                    if(p.nodeType === 'paragraph'){
+                                        return p.content.map(c => c.value).join('');
+                                    }
+                                    return '';
+                                }).join('');
+                                return `<li class="ml-4 list-decimal marker:text-cypress">${liContent}</li>`;
+                            }
+                            return '';
+                        }).join('');
+                        return `<ol class="space-y-2 my-4 pl-4">${listItems}</ol>`;
+                    }
+
+                    // Render Embedded Assets (Images)
+                    if (node.nodeType === 'embedded-asset-block') {
+                        const assetId = node.data.target.sys.id;
+                        // Find the asset in the included array
+                        const asset = assets.find(a => a.sys.id === assetId);
+                        if (asset && asset.fields.file.contentType.startsWith('image/')) {
+                            const url = 'https:' + asset.fields.file.url;
+                            const title = asset.fields.title || '';
+                            return `
+                                <div class="w-full my-8 rounded-2xl overflow-hidden border border-espresso/10 shadow-sm">
+                                    <img src="${url}" alt="${title}" class="w-full h-auto object-cover max-h-[500px]">
+                                </div>
+                            `;
+                        }
+                    }
+
                     return ''; 
                 }).join('');
             }
             
-            return `<p>${field}</p>`;
+            return `<p>${field}</p>`; // Fallback for plain text fields
         }
 
-        client.getEntries({ order: '-sys.createdAt' })
+        // Include resolving of links (assets) in the query
+        client.getEntries({ order: '-sys.createdAt', include: 2 })
             .then((response) => {
                 const container = document.getElementById('articles-list');
+                const assets = response.includes && response.includes.Asset ? response.includes.Asset : [];
                 
                 if (response.items.length === 0) {
                     container.innerHTML = "<p class='col-span-full text-center text-[16px] font-serif text-black/60 italic'>Δεν βρέθηκαν δημοσιευμένα άρθρα.</p>";
@@ -797,7 +867,8 @@
                 response.items.forEach(entry => {
                     const id = entry.sys.id;
                     const title = entry.fields.title || "Χωρίς Τίτλο";
-                    const body = renderBody(entry.fields.body); 
+                    // Pass assets array to renderer
+                    const body = renderBody(entry.fields.body, assets); 
                     const date = formatDate(entry.sys.createdAt);
 
                     // Store article globally to load it in the modal later
@@ -808,7 +879,7 @@
                             <span class="text-xs text-cypress/60 font-sans tracking-widest uppercase mb-4">${date}</span>
                             <h3 class="text-2xl font-serif text-cypress mb-4 group-hover:text-black transition-colors">${title}</h3>
                             <div class="text-[16px] text-black/80 font-light leading-relaxed line-clamp-4 mb-6 flex-grow overflow-hidden">
-                                ${body}
+                                ${body.replace(/<[^>]*>?/gm, ' ')}
                             </div>
                             <div class="mt-auto pt-4 border-t border-espresso/5 flex items-center text-cypress font-serif text-[16px] font-medium group-hover:gap-2 transition-all">
                                 Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
@@ -835,6 +906,9 @@
             document.getElementById('modal-article-title').innerText = article.title;
             document.getElementById('modal-article-date').innerText = article.date;
             document.getElementById('modal-article-body').innerHTML = article.body;
+
+            // Ensure modal scrolls to top when opened
+            document.querySelector('#article-modal-content > div:nth-child(2)').scrollTop = 0;
 
             const modal = document.getElementById('article-modal');
             const content = document.getElementById('article-modal-content');
